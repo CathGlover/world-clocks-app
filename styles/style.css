@@ -11,3 +11,12 @@ body {
   border-radius: 10px;
   border-color: grey;
 }
+
+#time-zone,
+select {
+  padding: 10px;
+  font-size: 22px;
+  border-radius: 8px;
+  margin: 10px;
+  font-family: Roboto;
+}
