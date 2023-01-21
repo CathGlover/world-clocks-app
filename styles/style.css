@@ -50,7 +50,8 @@ select {
   font-size: 18px;
 }
 
-.time {
+.time-1,
+.time-2 {
   font-size: 28px;
   font-family: Roboto 300;
 }
@@ -60,13 +61,15 @@ select {
   font-family: Roboto 400;
 }
 
-.date {
+.date-1,
+.date-2 {
   color: rgb(54, 54, 54);
 }
 .row {
   border-bottom: 1px dotted grey;
 }
 
-.location {
+.location-1,
+.location-2 {
   font-size: 26px;
 }
