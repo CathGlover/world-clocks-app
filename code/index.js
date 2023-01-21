@@ -1,4 +1,4 @@
-setInterval(function () {
+function cityDates() {
   let locationOne = document.querySelector(".location-1");
 
   let locationOneDate = document.querySelector(".date-1");
@@ -18,9 +18,7 @@ setInterval(function () {
     .format("HH:mm:ss [<small>]A[</small>]");
 
   locationOneTime.innerHTML = locationOneLiveTime;
-}, 1000);
 
-setInterval(function () {
   let locationTwo = document.querySelector(".location-2");
 
   let locationTwoDate = document.querySelector(".date-2");
@@ -36,4 +34,29 @@ setInterval(function () {
     .format("HH:mm:ss [<small>]A[</small>]");
 
   locationTwoTime.innerHTML = locationTwoLiveTime;
-}, 1000);
+}
+
+function updateCity(event) {
+  let cityTimeZone = event.target.value;
+  let cityTime = moment().tz(cityTimeZone);
+  console.log(cityTime.format("MMMM Do YYYY"));
+  let citiesElement = document.querySelector("#cities-times");
+  citiesElement.innerHTML = `<div class = "row">
+              <div class = "col">
+              <h2>${cityTimeZone}</h2>
+            <div class="date-1">${cityTime.format("dddd Do YYYY")}.</div>
+             </div>
+              <div class = "col">
+            <div class="time-1">${cityTime.format(
+              "HH:mm:ss [<small>]A[</small>]"
+            )}.</div><small>
+            </div>
+            </div>`;
+}
+cityDates();
+
+setInterval(cityDates, 1000);
+
+let citiesSelectElement = document.querySelector("#country");
+
+citiesSelectElement.addEventListener("change", updateCity);
