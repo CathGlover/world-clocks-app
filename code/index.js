@@ -78,7 +78,7 @@ function updateCity(event) {
             )}</div><small>
             </div>
             </div>
-            <a href = "index.html">Home Page</a>`;
+            <a href = "index.html">All Cities</a>`;
 }
 cityDates();
 
