@@ -42,10 +42,9 @@ function cityDates() {
 
 function updateCity(event) {
   let cityTimeZone = event.target.value;
-  console.log(event.target.value);
   let cityName = cityTimeZone.replace("_", " ").split("/")[1];
+
   let cityTime = moment().tz(cityTimeZone);
-  console.log(cityTime.format("MMMM Do YYYY"));
   let citiesElement = document.querySelector("#cities-times");
   citiesElement.innerHTML = `<div class = "row">
               <div class = "col">
@@ -55,7 +54,7 @@ function updateCity(event) {
               <div class = "col">
             <div class="time-3">${cityTime.format(
               "HH:mm:ss [<small>]A[</small>]"
-            )}.</div><small>
+            )}</div><small>
             </div>
             </div>`;
 }
