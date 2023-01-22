@@ -8,6 +8,7 @@ footer,
   text-align: center;
   padding: 0px;
   margin: 0px;
+  font-size: 18px;
 }
 .wrap {
   border: 1px solid;
@@ -52,7 +53,9 @@ select {
 
 .time-1,
 .time-2,
-.time-3 {
+.time-3,
+.time-4,
+.time-5 {
   font-size: 28px;
   font-family: Roboto 300;
 }
@@ -64,7 +67,9 @@ select {
 
 .date-1,
 .date-2,
-.date-3 {
+.date-3,
+.date-4,
+.date-5 {
   color: rgb(54, 54, 54);
 }
 .row {

@@ -14,7 +14,7 @@ function cityDates() {
     locationOneDate.innerHTML = locationOneLiveDate;
 
     let locationOneLiveTime = moment()
-      .tz("America/Los_Angeles")
+      .tz("Europe/London")
       .format("HH:mm:ss [<small>]A[</small>]");
 
     locationOneTime.innerHTML = locationOneLiveTime;
@@ -27,16 +27,35 @@ function cityDates() {
     let locationTwoTime = document.querySelector(".time-2");
 
     let locationTwoLiveDate = moment()
-      .tz("Europe/Paris")
+      .tz("Asia/Kolkata")
       .format("dddd Do YYYY");
 
     locationTwoDate.innerHTML = locationTwoLiveDate;
 
     let locationTwoLiveTime = moment()
-      .tz("Europe/Paris")
+      .tz("Asia/Kolkata")
       .format("HH:mm:ss [<small>]A[</small>]");
 
     locationTwoTime.innerHTML = locationTwoLiveTime;
+
+    let locationFour = document.querySelector(".location-4");
+    if (locationFour) {
+      let locationFourDate = document.querySelector(".date-4");
+
+      let locationFourTime = document.querySelector(".time-4");
+
+      let locationFourLiveDate = moment()
+        .tz("Asia/Manila")
+        .format("dddd Do YYYY");
+
+      locationFourDate.innerHTML = locationTwoLiveDate;
+
+      let locationFourLiveTime = moment()
+        .tz("Asia/Manila")
+        .format("HH:mm:ss [<small>]A[</small>]");
+
+      locationFourTime.innerHTML = locationFourLiveTime;
+    }
   }
 }
 
@@ -58,7 +77,8 @@ function updateCity(event) {
               "HH:mm:ss [<small>]A[</small>]"
             )}</div><small>
             </div>
-            </div>`;
+            </div>
+            <a href = "index.html">Home Page</a>`;
 }
 cityDates();
 
